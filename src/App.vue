@@ -16,6 +16,7 @@ import FooterTop from './components/FooterTop.vue'
 import FooterBottom from './components/FooterBottom.vue'
 
 
+
 export default {
   
   name: 'App',
@@ -24,7 +25,7 @@ export default {
     MainTop,
     FooterTop,
     FooterBottom,
-    MainBottom
+    MainBottom,
   }
   
 }

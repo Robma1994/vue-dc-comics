@@ -1,18 +1,18 @@
 export default 
     [
         {
-            icon: 'img/footer-facebook.png'
+            icon: '-facebook.png'
         },
         {
-            icon: 'img/footer-periscope.png'
+            icon: '-periscope.png'
         },
         {
-            icon: 'img/footer-pinterest.png'
+            icon: '-pinterest.png'
         },
         {
-            icon: 'img/footer-twitter.png'
+            icon: '-twitter.png'
         },
         {
-            icon: 'img/footer-youtube.png'
+            icon: '-youtube.png'
         },
     ]

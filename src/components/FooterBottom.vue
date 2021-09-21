@@ -8,7 +8,7 @@
         <h2>FOLLOW US</h2>
         <ul>
           <li v-for="(social, index) in socials" :key="index">
-            <img :src="require(`../assets/${social.icon}`)">
+            <img :src="require(`../assets/img/footer${social.icon}`)">
           </li>
         </ul>
       </div>

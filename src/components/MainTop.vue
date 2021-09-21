@@ -1,15 +1,29 @@
 <template>
   <div class="container-large">
     <div class="container-small">
-      <h1 class="title"> Content goes here </h1>
+      <MainFumetti 
+        v-for="(cartoon,index) in comicBooks" 
+        :key="index"
+        :cart= cartoon
+      />
+      
     </div>
   </div>
 </template>
 
 <script>
+import dcComics from '@/assets/data/dcComics.js'
+import MainFumetti from '@/components/MainFumetti.vue'
 export default {
   name: 'MainTop',
-  
+  components: {
+    MainFumetti
+  },
+  data() {
+    return {
+      comicBooks: dcComics
+    }
+  }
 }
 </script>
 
@@ -21,17 +35,7 @@ export default {
 }
 .container-small {
   padding: 40px 0 40px 0;
-  background-color: black;
+  
 }
-.title{
-  color: $colorTitle;
-  font-size: $fontSizeTitle;
 
-  &::before {
-    content: '-->';
-  }
-  &::after {
-    content: '<--';
-  }
-}
 </style>
