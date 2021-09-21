@@ -29,5 +29,6 @@ export default {
 }
 .title {
   font-size: 20px;
+  color: whitesmoke;
 }
 </style>

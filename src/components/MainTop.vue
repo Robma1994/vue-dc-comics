@@ -31,7 +31,7 @@ export default {
 <style scoped lang="scss">
 @import "../components/style/Variables";
 .container-large {
-  background-color: white;
+  background-color: black;
 }
 .container-small {
   display: flex;
