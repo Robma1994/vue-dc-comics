@@ -31,11 +31,12 @@ export default {
 <style scoped lang="scss">
 @import "../components/style/Variables";
 .container-large {
-  background-color: black;
+  background-color: white;
 }
 .container-small {
-  padding: 40px 0 40px 0;
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 </style>
