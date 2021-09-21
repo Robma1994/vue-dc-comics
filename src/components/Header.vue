@@ -1,15 +1,17 @@
 <template>
-  <div class="header-horizzontal container">
-    <div>
-      <img src="../assets/img/dc-logo.png" alt="">
+  <div class="container-large">
+    <div class="container-small header-horizzontal ">
+      <div>
+        <img src="../assets/img/dc-logo.png" alt="">
+      </div>
+      <nav>
+        <ul>
+          <li v-for="(link, index) in links" :key="index" >
+            <a :class="(link.current == true) ? 'active' : null"  href="#">{{link.text}}</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li v-for="(link, index) in links" :key="index" >
-          <a :class="(link.current == true) ? 'active' : null"  href="#">{{link.text}}</a>
-        </li>
-      </ul>
-    </nav>
   </div>
 </template>
 
@@ -79,27 +81,44 @@ export default {
 <style scoped lang="scss">
 @import "../components/style/Variables";
 
-  .header-horizzontal {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
- ul{
+.header-horizzontal {
   display: flex;
-  list-style-type: none;
+  align-items: center;
+}
 
-    li a {
-      text-decoration: none;
-      padding: 15px;
-      font-size: 14px;
-      color: $colorLink;
-      font-weight: $fontWeight500;
-    
-      &:hover,
-      &.active{
-        color: $colorChange;
-      }
+.container-small {
+  padding: 20px 0 20px 0;
+  div {
+      width: 20%;
+  }
+  nav {
+      width: 80%;
     }
- }
+}
+
+ul {
+display: flex;
+justify-content: flex-end;
+list-style-type: none;
+
+  li a {
+    text-decoration: none;
+    padding: 15px;
+    font-size: 14px;
+    color: $colorLink;
+    font-weight: $fontWeight500;
+  
+    &:hover {
+      color: $colorChange;
+    }
+    &.active{
+      color: $colorChange;
+      border-bottom: 5px solid $colorChange;
+      padding-bottom: 60px;
+    }
+  }
+}
+
+
+
 </style>
